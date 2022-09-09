@@ -3,29 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
     <title>Document</title>
 </head>
 <script type="text/javascript">
- 
-   var user = prompt("Enter your username");
-   var amount = prompt("Enter your salary");
-   var role = prompt("Enter your role");
+  class Employee {
+    constructor(name,salary,role){
+        this.name = name;
+        this.salary = salary;
+        this.role = role;
+    }
+    calcBonus(){
+    var bonus;
+    if(this.role == "IT") bonus = this.salary * 0.5;
+    if(this.role == "Testing") bonus = this.salary * 0.45;
+    if(this.role == "Admin") bonus = this.salary * 0.3;
+    if(this.role == "Others") bonus = this.salary * 0.2;
 
-  var bonus;
-
-    if(role == "IT") bonus = amount * 0.5;
-    if(role == "Testing") bonus = amount * 0.45;
-    if(role == "Admin") bonus = amount * 0.3;
-    if(role == "Others") bonus = amount * 0.2;
-
-   document.write("Name :" + user);
+   document.write("Name :" + this.name);
    document.write("<br>"); 
-   document.write("Role :" + role);
+   document.write("Role :" + this.role);
    document.write("<br>");
-   document.write("Salary :" + amount);
+   document.write("Salary :" + this.salary);
    document.write("<br>");
    document.write("Bonus : " +bonus);
+    }
+  }
+
+  var E = new Employee("JOHN",23000,"IT");
+  E.calcBonus();
+ 
 
 </script>
 <body>
