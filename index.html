@@ -7,35 +7,43 @@
     <title>Document</title>
 </head>
 <script type="text/javascript">
- 
-   var user1 = prompt("Enter your username");
-   var pass1 = prompt("Enter your password");
-
-   alert("Signed in Successfully");
-
-   var user2 = prompt("Enter your username");
-
-    if(user1 == user2){
-        alert("Welcome" + user1);
-        var pass2 = prompt("Enter your password");
-        if( pass1 == pass2 ){
-            alert("Successfully Logged in");
-            document.write("Credentials " + user1 + "and password " + pass1);
+    class Validate{
+        constructor(){
+        }
+            logchecker(){
+            var user = prompt("Enter username");
+            var pass = prompt("Enter password");
+             console.log(user);
+             console.log(pass);
+            var user2 = prompt("Enter username");
+            if(user == user2){
+                alert("Welcome " +user);
+                var pass2 = prompt("Enter password");
+                if(pass==pass2)
+                {
+                    document.write("The username is" + user);
+                    document.write("<br>");
+                    document.write("The password is" + pass);
+                    document.write("<br>");
+                    document.write("Successful login");
+                }
+                else{
+                    alert("Wrong password");
+                }
+            }
+            else{
+                alert("No user found");
+            }
+            }
           
-        }
-        else{
-            alert("Wrong password try again"); 
-        }
-            
-    }
-    else{
-        alert("User not found Sign-In");
+        
     }
 
- 
+    let newuser = new Validate();
+     newuser.logchecker();
 
 </script>
 <body>
-  
+    
 </body>
 </html>
