@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script type="text/javascript">
+ 
+   var user = prompt("Enter your username");
+   var amount = prompt("Enter your salary");
+   var role = prompt("Enter your role");
+
+  var bonus;
+
+    if(role == "IT") bonus = amount * 0.5;
+    if(role == "Testing") bonus = amount * 0.45;
+    if(role == "Admin") bonus = amount * 0.3;
+    if(role == "Others") bonus = amount * 0.2;
+
+   document.write("Name :" + user);
+   document.write("<br>"); 
+   document.write("Role :" + role);
+   document.write("<br>");
+   document.write("Salary :" + amount);
+   document.write("<br>");
+   document.write("Bonus : " +bonus);
+
+</script>
+<body>
+    
+</body>
+</html>
